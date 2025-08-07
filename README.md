@@ -1,32 +1,52 @@
-🧠 AI-Powered Slogan Generator using OpenAI & Google Cloud Functions
-This project demonstrates how to build and deploy a serverless slogan generator for businesses using OpenAI's GPT-3.5-turbo model and Google Cloud Functions. By sending a business description via POST request, the deployed function returns a tailored slogan in real-time.
+## 📧 Email Assistant – Generate Polite Email Responses with OpenAI
 
-🚀 Key Features:
-Google Cloud Function setup using functions_framework
+This is a lightweight Python-based serverless API that uses OpenAI's GPT-4 to **generate polite, context-aware email replies** that say "no" to requests in a respectful manner.
 
-Integration with OpenAI's Chat Completions API
 
-Deployed endpoint accessible for external API calls (e.g., Postman)
+### 🔧 Features
 
-JSON input/output for easy integration into frontends or automation workflows
+* 🧠 Powered by **OpenAI GPT-4**
+* ☁️ Deployed on **Google Cloud Run**
+* 🔒 API key secured via environment variables
+* 🔁 Accepts an email request in JSON and returns a polite rejection response
+* ⚡ Fast and scalable using serverless architecture
 
-📦 Tech Stack:
-Python 3.12
+---
 
-OpenAI API (gpt-3.5-turbo)
+### 🗂️ Tech Stack
 
-Google Cloud Run (Serverless)
+* Python 3.12
+* Flask + Functions Framework
+* Google Cloud Run
+* OpenAI API
 
-Postman for testing
+---
 
-📌 Example Use Case:
-Send:
+### 📦 API Endpoint
+
+`POST /`
+
+**Request Body:**
+
+```json
 {
-  "name": "A company that is a veterinarian-designed pet-wellness assistant..."
+  "email": "Can you work on this urgent task tonight?"
 }
+```
 
-Get:
+**Response:**
 
+```json
 {
-  "slogan": "Pawsitively proactive care for your furry friend."
+  "choice_1": "Hi, thank you for reaching out. I’d love to help, but I’m unable to take this on at the moment..."
 }
+```
+
+---
+
+### 📁 Files
+
+* `main.py` – main API logic
+* `requirements.txt` – dependencies
+* `.gitignore`, `README.md` – basic project files
+
