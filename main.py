@@ -1,4 +1,5 @@
 import functions_framework
+from dotenv import load_dotenv
 import os
 from flask import jsonify, Request
 from openai import OpenAI
