@@ -3,6 +3,9 @@ import os
 from flask import jsonify, Request
 from openai import OpenAI
 
+# Load env vars locally (ignored on Google Cloud)
+load_dotenv()
+
 @functions_framework.http
 def get_message(request: Request):
     request_json = request.get_json(silent=True)
